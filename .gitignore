@@ -1,0 +1,4 @@
+mysql_data_new/
+.Dockerfile.swp
+__pycache__/
+*.pyc

@@ -35,4 +35,22 @@ pipeline{
             }
         }
     }
+    post{
+        success{
+            script{
+                emailext from: 'yashgondaliya0@gmail.com',
+                to: 'yashgondaliya0@gmail.com',
+                body: 'Build success',
+                subject: 'Build success'
+            }
+        }
+        failure{
+            script{
+                emailext from: 'yashgondaliya0@gmail.com',
+                to: 'yashgondaliya0@gmail.com',
+                body: 'Build failed'
+                subject: 'Build failed'
+            }
+        }
+    }
 }
